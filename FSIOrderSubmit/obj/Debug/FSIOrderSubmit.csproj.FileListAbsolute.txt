@@ -1,0 +1,9 @@
+C:\Users\user\Documents\Visual Studio 2015\Projects\FSIOrderSubmit\FSIOrderSubmit\bin\Debug\FSIOrderSubmit.exe.config
+C:\Users\user\Documents\Visual Studio 2015\Projects\FSIOrderSubmit\FSIOrderSubmit\bin\Debug\FSIOrderSubmit.exe
+C:\Users\user\Documents\Visual Studio 2015\Projects\FSIOrderSubmit\FSIOrderSubmit\bin\Debug\FSIOrderSubmit.pdb
+C:\Users\user\Documents\Visual Studio 2015\Projects\FSIOrderSubmit\FSIOrderSubmit\obj\Debug\FSIOrderSubmit.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2015\Projects\FSIOrderSubmit\FSIOrderSubmit\obj\Debug\FSIOrderSubmit.Properties.Resources.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\FSIOrderSubmit\FSIOrderSubmit\obj\Debug\FSIOrderSubmit.csproj.GenerateResource.Cache
+C:\Users\user\Documents\Visual Studio 2015\Projects\FSIOrderSubmit\FSIOrderSubmit\obj\Debug\FSIOrderSubmit.exe
+C:\Users\user\Documents\Visual Studio 2015\Projects\FSIOrderSubmit\FSIOrderSubmit\obj\Debug\FSIOrderSubmit.pdb
+C:\Users\user\Documents\Visual Studio 2015\Projects\FSIOrderSubmit\FSIOrderSubmit\obj\Debug\FSIOrderSubmit.Form1.resources
