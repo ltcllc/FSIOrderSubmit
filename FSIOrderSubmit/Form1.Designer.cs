@@ -38,6 +38,7 @@
             // 
             this.cbTestMode.AutoSize = true;
             this.cbTestMode.Checked = global::FSIOrderSubmit.Properties.Settings.Default.TestMode;
+            this.cbTestMode.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbTestMode.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::FSIOrderSubmit.Properties.Settings.Default, "TestMode", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cbTestMode.Location = new System.Drawing.Point(13, 13);
             this.cbTestMode.Name = "cbTestMode";
@@ -48,7 +49,7 @@
             // 
             // bProcessFiles
             // 
-            this.bProcessFiles.Location = new System.Drawing.Point(34, 102);
+            this.bProcessFiles.Location = new System.Drawing.Point(34, 151);
             this.bProcessFiles.Name = "bProcessFiles";
             this.bProcessFiles.Size = new System.Drawing.Size(75, 23);
             this.bProcessFiles.TabIndex = 1;
@@ -65,7 +66,7 @@
             // 
             // bSelectFiles
             // 
-            this.bSelectFiles.Location = new System.Drawing.Point(128, 56);
+            this.bSelectFiles.Location = new System.Drawing.Point(34, 105);
             this.bSelectFiles.Name = "bSelectFiles";
             this.bSelectFiles.Size = new System.Drawing.Size(75, 23);
             this.bSelectFiles.TabIndex = 2;
@@ -82,7 +83,8 @@
             this.Controls.Add(this.bProcessFiles);
             this.Controls.Add(this.cbTestMode);
             this.Name = "Form1";
-            this.Text = "File Upload";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FileUpload";
             this.ResumeLayout(false);
             this.PerformLayout();
 

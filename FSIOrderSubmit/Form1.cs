@@ -21,6 +21,17 @@ namespace FSIOrderSubmit
             InitializeComponent();            
         }
 
+        //Create DumpLog type
+        public static void DumpLog(StreamReader r)
+        {
+            string line;
+            while ((line = r.ReadLine()) != null)
+            {
+                Console.WriteLine(line);
+            }
+
+        }
+        //move file to archive
 
         public async void ProcessOrder(string fileName)
         {            
@@ -44,14 +55,13 @@ namespace FSIOrderSubmit
                 var sr = new StringReader(responseData);
 
                 //serialize the successful response
-                success = (Success) serializer.Deserialize(sr);
+                success = (Success)serializer.Deserialize(sr);
 
                 //Get the order Id
                 Guid orderId = success.OrderId;
 
                 //write to log file
-
-                //move file to archive
+ 
             }
             else
             {
