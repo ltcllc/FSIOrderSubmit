@@ -96,5 +96,10 @@ namespace FSIOrderSubmit
         {
             openFileDialog1.ShowDialog();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
