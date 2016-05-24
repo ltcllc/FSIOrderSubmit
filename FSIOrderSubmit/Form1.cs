@@ -61,6 +61,20 @@ namespace FSIOrderSubmit
                 Guid orderId = success.OrderId;
 
                 //write to log file
+                using (StreamWriter sw = new StreamWriter("SuccessLog.txt"))
+                {
+                    sw.WriteLine(success.OrderId);
+                }
+
+                //read and show each line from the file
+                string line = "";
+                using (StreamReader a = new StreamReader("SuccessLog.txt"))
+                {
+                    while ((line = a.ReadLine()) != null)
+                    {
+                        Console.WriteLine(line);
+                    }
+                }
  
             }
             else
