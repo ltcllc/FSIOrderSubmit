@@ -113,7 +113,7 @@ namespace FSIOrderSubmit
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Excelda FSI Order Submission 1.0\nWritten by L Trammer Consulting LLC", "About");
         }
     }
 }
