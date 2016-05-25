@@ -12,16 +12,19 @@
       <Value Profile="(Default)">https://orders.fsifulfillment.com</Value>
     </Setting>
     <Setting Name="LiveOrderServiceApiKey" Type="System.String" Scope="Application">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">test123</Value>
     </Setting>
     <Setting Name="TestMode" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="TestOrderServiceRequestUri" Type="System.String" Scope="Application">
+    <Setting Name="TestCreateOrderRequestUri" Type="System.String" Scope="Application">
       <Value Profile="(Default)">/Services/Orders/V5/CreateOrder</Value>
     </Setting>
-    <Setting Name="LiveOrderServiceRequestUri" Type="System.String" Scope="Application">
+    <Setting Name="LiveCreateOrderRequestUri" Type="System.String" Scope="Application">
       <Value Profile="(Default)">/V5/CreateOrder</Value>
+    </Setting>
+    <Setting Name="ArchiveFolderLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

@@ -52,7 +52,7 @@ namespace FSIOrderSubmit.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("test123")]
         public string LiveOrderServiceApiKey {
             get {
                 return ((string)(this["LiveOrderServiceApiKey"]));
@@ -74,18 +74,30 @@ namespace FSIOrderSubmit.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("/Services/Orders/V5/CreateOrder")]
-        public string TestOrderServiceRequestUri {
+        public string TestCreateOrderRequestUri {
             get {
-                return ((string)(this["TestOrderServiceRequestUri"]));
+                return ((string)(this["TestCreateOrderRequestUri"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("/V5/CreateOrder")]
-        public string LiveOrderServiceRequestUri {
+        public string LiveCreateOrderRequestUri {
             get {
-                return ((string)(this["LiveOrderServiceRequestUri"]));
+                return ((string)(this["LiveCreateOrderRequestUri"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ArchiveFolderLocation {
+            get {
+                return ((string)(this["ArchiveFolderLocation"]));
+            }
+            set {
+                this["ArchiveFolderLocation"] = value;
             }
         }
     }

@@ -28,29 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbTestMode = new System.Windows.Forms.CheckBox();
             this.bProcessFiles = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.bSelectFiles = new System.Windows.Forms.Button();
+            this.fbdArchiveLocation = new System.Windows.Forms.FolderBrowserDialog();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuConfiguration = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // cbTestMode
-            // 
-            this.cbTestMode.AutoSize = true;
-            this.cbTestMode.Checked = global::FSIOrderSubmit.Properties.Settings.Default.TestMode;
-            this.cbTestMode.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::FSIOrderSubmit.Properties.Settings.Default, "TestMode", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cbTestMode.Location = new System.Drawing.Point(13, 13);
-            this.cbTestMode.Name = "cbTestMode";
-            this.cbTestMode.Size = new System.Drawing.Size(77, 17);
-            this.cbTestMode.TabIndex = 0;
-            this.cbTestMode.Text = "Test Mode";
-            this.cbTestMode.UseVisualStyleBackColor = true;
             // 
             // bProcessFiles
             // 
-            this.bProcessFiles.Location = new System.Drawing.Point(34, 102);
+            this.bProcessFiles.Location = new System.Drawing.Point(12, 77);
             this.bProcessFiles.Name = "bProcessFiles";
-            this.bProcessFiles.Size = new System.Drawing.Size(75, 23);
+            this.bProcessFiles.Size = new System.Drawing.Size(123, 23);
             this.bProcessFiles.TabIndex = 1;
             this.bProcessFiles.Text = "Process Files";
             this.bProcessFiles.UseVisualStyleBackColor = true;
@@ -59,41 +50,61 @@
             // openFileDialog1
             // 
             this.openFileDialog1.DefaultExt = "xml";
-            this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "txt files|*.txt|xml Files|*.xml";
             this.openFileDialog1.Multiselect = true;
             // 
             // bSelectFiles
             // 
-            this.bSelectFiles.Location = new System.Drawing.Point(128, 56);
+            this.bSelectFiles.Location = new System.Drawing.Point(12, 48);
             this.bSelectFiles.Name = "bSelectFiles";
-            this.bSelectFiles.Size = new System.Drawing.Size(75, 23);
+            this.bSelectFiles.Size = new System.Drawing.Size(123, 23);
             this.bSelectFiles.TabIndex = 2;
-            this.bSelectFiles.Text = "Select Files";
+            this.bSelectFiles.Text = "Select files to import";
             this.bSelectFiles.UseVisualStyleBackColor = true;
             this.bSelectFiles.Click += new System.EventHandler(this.bSelectFiles_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuConfiguration});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(595, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuConfiguration
+            // 
+            this.menuConfiguration.Name = "menuConfiguration";
+            this.menuConfiguration.Size = new System.Drawing.Size(93, 20);
+            this.menuConfiguration.Text = "Configuration";
+            this.menuConfiguration.Click += new System.EventHandler(this.menuConfiguration_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 324);
+            this.ClientSize = new System.Drawing.Size(595, 128);
             this.Controls.Add(this.bSelectFiles);
             this.Controls.Add(this.bProcessFiles);
-            this.Controls.Add(this.cbTestMode);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "File Upload";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox cbTestMode;
         private System.Windows.Forms.Button bProcessFiles;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button bSelectFiles;
+        private System.Windows.Forms.FolderBrowserDialog fbdArchiveLocation;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuConfiguration;
     }
 }
 

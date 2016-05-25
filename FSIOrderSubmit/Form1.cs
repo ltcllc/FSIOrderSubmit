@@ -11,6 +11,7 @@ using System.Net.Http;
 using System.Xml.Serialization;
 using Models.OrderServiceV5;
 using System.IO;
+using FSIOrderSubmit.Models.OrderServiceV5;
 
 namespace FSIOrderSubmit
 {
@@ -18,14 +19,15 @@ namespace FSIOrderSubmit
     {
         public Form1()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
 
         public async void ProcessOrder(string fileName)
-        {            
+        {
             var fail = new Fail();
             var success = new Success();
+            var orderService = new FsiOrderServiceV5();
 
             var fs = new FileStream(fileName, FileMode.Open);
 
@@ -33,16 +35,17 @@ namespace FSIOrderSubmit
 
             string orderXml = reader.ReadToEnd();
 
-            var response = SendOrderToFSI(orderXml);
+            reader.Close();
+            fs.Close();
 
-            var responseData = await response.Content.ReadAsStringAsync();
+            var orderServiceResponse = await orderService.SendOrder(orderXml);
 
-            if (response.IsSuccessStatusCode)
+            if (orderServiceResponse.ResponseMessage.IsSuccessStatusCode)
             {
                 //do success stuff
                 var serializer = new XmlSerializer(typeof(Success));
-                var sr = new StringReader(responseData);
-
+                var sr = new StringReader(orderServiceResponse.Content);
+                
                 //serialize the successful response
                 success = (Success) serializer.Deserialize(sr);
 
@@ -52,30 +55,23 @@ namespace FSIOrderSubmit
                 //write to log file
 
                 //move file to archive
+
+                sr.Close();
             }
             else
             {
                 //do fail stuff
                 var serializer = new XmlSerializer(typeof(Fail));
-                var sr = new StringReader(responseData);
+                var sr = new StringReader(orderServiceResponse.Content);
 
                 //serialize the failed response
                 fail = (Fail) serializer.Deserialize(sr);
 
+                sr.Close();
                 //print the errors to the console
-                //change to write to a log file
-                fail.Errors.ForEach(a => Console.WriteLine(a));
-
-                //require input so the console does not close
-                Console.ReadKey();
+                
             }
-        }
-
-        private static HttpResponseMessage SendOrderToFSI(string orderXml)
-        {
-            var orderService = new FsiOrderServiceV5();
-            return orderService.SendOrder(orderXml).Result;
-        }
+        }       
 
         private void bProcessFiles_Click(object sender, EventArgs e)
         {
@@ -85,6 +81,12 @@ namespace FSIOrderSubmit
         private void bSelectFiles_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
+        }
+
+        private void menuConfiguration_Click(object sender, EventArgs e)
+        {
+            Configuration configurationWindow = new Configuration();
+            configurationWindow.ShowDialog();
         }
     }
 }
