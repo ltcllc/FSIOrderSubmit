@@ -112,5 +112,5 @@
         private System.Windows.Forms.Button bSelectFiles;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
-}
+} 
 
