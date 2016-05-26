@@ -104,17 +104,19 @@ namespace FSIOrderSubmit
                 //DirectoryInfo[] cDirs = new DirectoryInfo(@"c:\").GetDirectories();
 
                 //write to log file
+
                 try {
                     using (StreamWriter sw = new StreamWriter("C:/Users/user/Desktop/ErrorLog.txt"))
                     {
-                        fail.Errors.ForEach(a => Console.WriteLine(a));
+                        fail.Errors.ForEach(a => Console.WriteLine(a));   
+                        //Console.WriteLine(Fail.Errors);
                     }
                 }
                 catch (DirectoryNotFoundException exc)
                 {
                     MessageBox.Show("Directory could not be found.");
                 }
-                
+
 
 
             }

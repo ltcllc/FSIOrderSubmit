@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FSIOrderSubmit.exe" size="192464">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FSIOrderSubmit.exe" size="192976">
       <assemblyIdentity name="FSIOrderSubmit" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cSXztgrFmLfb/gbu8nlIDeKz0KfNXMUkd/Sgu6twokg=</dsig:DigestValue>
+        <dsig:DigestValue>gmXl19FzqqrK+sm6WsGaQY4JzEz4B3hnzd9479ia6hw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
