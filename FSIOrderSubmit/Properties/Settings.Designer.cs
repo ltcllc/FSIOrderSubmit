@@ -50,18 +50,9 @@ namespace FSIOrderSubmit.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string LiveOrderServiceApiKey {
-            get {
-                return ((string)(this["LiveOrderServiceApiKey"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool TestMode {
             get {
                 return ((bool)(this["TestMode"]));
@@ -86,6 +77,54 @@ namespace FSIOrderSubmit.Properties {
         public string LiveOrderServiceRequestUri {
             get {
                 return ((string)(this["LiveOrderServiceRequestUri"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("/Services/Orders/V5/CreateOrder")]
+        public string TestCreateOrderRequestUris {
+            get {
+                return ((string)(this["TestCreateOrderRequestUris"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("test123")]
+        public string LiveOrderServiceApiKey {
+            get {
+                return ((string)(this["LiveOrderServiceApiKey"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("/Services/Orders/V5/CreateOrder")]
+        public string TestCreateOrderRequestUri {
+            get {
+                return ((string)(this["TestCreateOrderRequestUri"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("/V5/CreateOrder")]
+        public string LiveCreateOrderRequestUri {
+            get {
+                return ((string)(this["LiveCreateOrderRequestUri"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\user\\Desktop")]
+        public string ArchiveFolderLocation {
+            get {
+                return ((string)(this["ArchiveFolderLocation"]));
+            }
+            set {
+                this["ArchiveFolderLocation"] = value;
             }
         }
     }
