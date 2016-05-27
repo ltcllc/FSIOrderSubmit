@@ -12,7 +12,7 @@
       <Value Profile="(Default)">https://orders.fsifulfillment.com</Value>
     </Setting>
     <Setting Name="LiveOrderServiceApiKey" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">test123</Value>
+      <Value Profile="(Default)">S0s6OUFBODJBMDgtMzRBMC00Q0UwLThDOUYtRjE2REU3MDg3QjIw</Value>
     </Setting>
     <Setting Name="TestMode" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
@@ -25,6 +25,15 @@
     </Setting>
     <Setting Name="ArchiveFolderLocation" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LogFileFolderLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TestOrderStatusRequestUri" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/Services/Orders/V5/OrderStatus</Value>
+    </Setting>
+    <Setting Name="LiveOrderStatusRequestUri" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/V5/OrderStatus</Value>
     </Setting>
   </Settings>
 </SettingsFile>

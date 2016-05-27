@@ -52,7 +52,7 @@ namespace FSIOrderSubmit.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("test123")]
+        [global::System.Configuration.DefaultSettingValueAttribute("S0s6OUFBODJBMDgtMzRBMC00Q0UwLThDOUYtRjE2REU3MDg3QjIw")]
         public string LiveOrderServiceApiKey {
             get {
                 return ((string)(this["LiveOrderServiceApiKey"]));
@@ -98,6 +98,36 @@ namespace FSIOrderSubmit.Properties {
             }
             set {
                 this["ArchiveFolderLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LogFileFolderLocation {
+            get {
+                return ((string)(this["LogFileFolderLocation"]));
+            }
+            set {
+                this["LogFileFolderLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("/Services/Orders/V5/OrderStatus")]
+        public string TestOrderStatusRequestUri {
+            get {
+                return ((string)(this["TestOrderStatusRequestUri"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("/V5/OrderStatus")]
+        public string LiveOrderStatusRequestUri {
+            get {
+                return ((string)(this["LiveOrderStatusRequestUri"]));
             }
         }
     }

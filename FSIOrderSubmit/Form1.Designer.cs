@@ -34,6 +34,9 @@
             this.fbdArchiveLocation = new System.Windows.Forms.FolderBrowserDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuConfiguration = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.chkAsync = new System.Windows.Forms.CheckBox();
+            this.bOrderStatusTest = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +53,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.DefaultExt = "xml";
-            this.openFileDialog1.Filter = "txt files|*.txt|xml Files|*.xml";
+            this.openFileDialog1.Filter = "xml Files|*.xml|txt files|*.txt";
             this.openFileDialog1.Multiselect = true;
             // 
             // bSelectFiles
@@ -80,11 +83,43 @@
             this.menuConfiguration.Text = "Configuration";
             this.menuConfiguration.Click += new System.EventHandler(this.menuConfiguration_Click);
             // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(156, 86);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(0, 13);
+            this.lblMessage.TabIndex = 4;
+            // 
+            // chkAsync
+            // 
+            this.chkAsync.AutoSize = true;
+            this.chkAsync.Location = new System.Drawing.Point(12, 106);
+            this.chkAsync.Name = "chkAsync";
+            this.chkAsync.Size = new System.Drawing.Size(55, 17);
+            this.chkAsync.TabIndex = 5;
+            this.chkAsync.Text = "Async";
+            this.chkAsync.UseVisualStyleBackColor = true;
+            // 
+            // bOrderStatusTest
+            // 
+            this.bOrderStatusTest.Enabled = false;
+            this.bOrderStatusTest.Location = new System.Drawing.Point(307, 48);
+            this.bOrderStatusTest.Name = "bOrderStatusTest";
+            this.bOrderStatusTest.Size = new System.Drawing.Size(131, 23);
+            this.bOrderStatusTest.TabIndex = 6;
+            this.bOrderStatusTest.Text = "Order Status Test";
+            this.bOrderStatusTest.UseVisualStyleBackColor = true;
+            this.bOrderStatusTest.Click += new System.EventHandler(this.bOrderStatusTest_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 128);
+            this.Controls.Add(this.bOrderStatusTest);
+            this.Controls.Add(this.chkAsync);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.bSelectFiles);
             this.Controls.Add(this.bProcessFiles);
             this.Controls.Add(this.menuStrip1);
@@ -105,6 +140,9 @@
         private System.Windows.Forms.FolderBrowserDialog fbdArchiveLocation;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuConfiguration;
+        private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.CheckBox chkAsync;
+        private System.Windows.Forms.Button bOrderStatusTest;
     }
 }
 

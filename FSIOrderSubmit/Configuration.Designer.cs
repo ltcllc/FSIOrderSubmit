@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbArchiveFolderLocation = new System.Windows.Forms.TextBox();
             this.bSaveConfiguration = new System.Windows.Forms.Button();
-            this.cbTestMode = new System.Windows.Forms.CheckBox();
             this.bSelectArchiveLocation = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,45 +37,32 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbArchiveFolderLocation = new System.Windows.Forms.TextBox();
+            this.cbTestMode = new System.Windows.Forms.CheckBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.bSelectLogFileLocation = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // tbArchiveFolderLocation
-            // 
-            this.tbArchiveFolderLocation.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::FSIOrderSubmit.Properties.Settings.Default, "ArchiveFolderLocation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.tbArchiveFolderLocation.Location = new System.Drawing.Point(191, 70);
-            this.tbArchiveFolderLocation.Name = "tbArchiveFolderLocation";
-            this.tbArchiveFolderLocation.Size = new System.Drawing.Size(493, 20);
-            this.tbArchiveFolderLocation.TabIndex = 3;
-            this.tbArchiveFolderLocation.Text = global::FSIOrderSubmit.Properties.Settings.Default.ArchiveFolderLocation;
             // 
             // bSaveConfiguration
             // 
-            this.bSaveConfiguration.Location = new System.Drawing.Point(191, 252);
+            this.bSaveConfiguration.Location = new System.Drawing.Point(190, 339);
             this.bSaveConfiguration.Name = "bSaveConfiguration";
             this.bSaveConfiguration.Size = new System.Drawing.Size(143, 23);
             this.bSaveConfiguration.TabIndex = 6;
             this.bSaveConfiguration.Text = "Save Configuration";
             this.bSaveConfiguration.UseVisualStyleBackColor = true;
             this.bSaveConfiguration.Click += new System.EventHandler(this.bSaveConfiguration_Click);
-            // 
-            // cbTestMode
-            // 
-            this.cbTestMode.AutoSize = true;
-            this.cbTestMode.Checked = global::FSIOrderSubmit.Properties.Settings.Default.TestMode;
-            this.cbTestMode.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbTestMode.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::FSIOrderSubmit.Properties.Settings.Default, "TestMode", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cbTestMode.Location = new System.Drawing.Point(191, 47);
-            this.cbTestMode.Name = "cbTestMode";
-            this.cbTestMode.Size = new System.Drawing.Size(77, 17);
-            this.cbTestMode.TabIndex = 0;
-            this.cbTestMode.Text = "Test Mode";
-            this.cbTestMode.UseVisualStyleBackColor = true;
             // 
             // bSelectArchiveLocation
             // 
@@ -152,37 +137,13 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Live Create Order URI";
             // 
-            // textBox1
+            // textBox6
             // 
-            this.textBox1.Location = new System.Drawing.Point(191, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(492, 20);
-            this.textBox1.TabIndex = 19;
-            this.textBox1.Text = global::FSIOrderSubmit.Properties.Settings.Default.TestOrderServiceBaseAddress;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(191, 123);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(492, 20);
-            this.textBox2.TabIndex = 20;
-            this.textBox2.Text = global::FSIOrderSubmit.Properties.Settings.Default.TestOrderServiceApiKey;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(190, 148);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(493, 20);
-            this.textBox3.TabIndex = 21;
-            this.textBox3.Text = global::FSIOrderSubmit.Properties.Settings.Default.TestCreateOrderRequestUri;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(190, 174);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(493, 20);
-            this.textBox4.TabIndex = 22;
-            this.textBox4.Text = global::FSIOrderSubmit.Properties.Settings.Default.LiveOrderServiceBaseAddress;
+            this.textBox6.Location = new System.Drawing.Point(190, 227);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(495, 20);
+            this.textBox6.TabIndex = 24;
+            this.textBox6.Text = global::FSIOrderSubmit.Properties.Settings.Default.LiveCreateOrderRequestUri;
             // 
             // textBox5
             // 
@@ -192,19 +153,133 @@
             this.textBox5.TabIndex = 23;
             this.textBox5.Text = global::FSIOrderSubmit.Properties.Settings.Default.LiveOrderServiceApiKey;
             // 
-            // textBox6
+            // textBox4
             // 
-            this.textBox6.Location = new System.Drawing.Point(189, 226);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(495, 20);
-            this.textBox6.TabIndex = 24;
-            this.textBox6.Text = global::FSIOrderSubmit.Properties.Settings.Default.LiveCreateOrderRequestUri;
+            this.textBox4.Location = new System.Drawing.Point(190, 174);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(493, 20);
+            this.textBox4.TabIndex = 22;
+            this.textBox4.Text = global::FSIOrderSubmit.Properties.Settings.Default.LiveOrderServiceBaseAddress;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(190, 148);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(493, 20);
+            this.textBox3.TabIndex = 21;
+            this.textBox3.Text = global::FSIOrderSubmit.Properties.Settings.Default.TestCreateOrderRequestUri;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(191, 123);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(492, 20);
+            this.textBox2.TabIndex = 20;
+            this.textBox2.Text = global::FSIOrderSubmit.Properties.Settings.Default.TestOrderServiceApiKey;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(191, 96);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(492, 20);
+            this.textBox1.TabIndex = 19;
+            this.textBox1.Text = global::FSIOrderSubmit.Properties.Settings.Default.TestOrderServiceBaseAddress;
+            // 
+            // tbArchiveFolderLocation
+            // 
+            this.tbArchiveFolderLocation.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::FSIOrderSubmit.Properties.Settings.Default, "ArchiveFolderLocation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.tbArchiveFolderLocation.Location = new System.Drawing.Point(191, 70);
+            this.tbArchiveFolderLocation.Name = "tbArchiveFolderLocation";
+            this.tbArchiveFolderLocation.Size = new System.Drawing.Size(493, 20);
+            this.tbArchiveFolderLocation.TabIndex = 3;
+            this.tbArchiveFolderLocation.Text = global::FSIOrderSubmit.Properties.Settings.Default.ArchiveFolderLocation;
+            // 
+            // cbTestMode
+            // 
+            this.cbTestMode.AutoSize = true;
+            this.cbTestMode.Checked = global::FSIOrderSubmit.Properties.Settings.Default.TestMode;
+            this.cbTestMode.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbTestMode.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::FSIOrderSubmit.Properties.Settings.Default, "TestMode", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cbTestMode.Location = new System.Drawing.Point(191, 47);
+            this.cbTestMode.Name = "cbTestMode";
+            this.cbTestMode.Size = new System.Drawing.Size(77, 17);
+            this.cbTestMode.TabIndex = 0;
+            this.cbTestMode.Text = "Test Mode";
+            this.cbTestMode.UseVisualStyleBackColor = true;
+            // 
+            // textBox7
+            // 
+            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::FSIOrderSubmit.Properties.Settings.Default, "LogFileFolderLocation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox7.Location = new System.Drawing.Point(190, 253);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(492, 20);
+            this.textBox7.TabIndex = 25;
+            this.textBox7.Text = global::FSIOrderSubmit.Properties.Settings.Default.LogFileFolderLocation;
+            // 
+            // bSelectLogFileLocation
+            // 
+            this.bSelectLogFileLocation.Location = new System.Drawing.Point(696, 253);
+            this.bSelectLogFileLocation.Name = "bSelectLogFileLocation";
+            this.bSelectLogFileLocation.Size = new System.Drawing.Size(75, 23);
+            this.bSelectLogFileLocation.TabIndex = 26;
+            this.bSelectLogFileLocation.Text = "Browse";
+            this.bSelectLogFileLocation.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(108, 256);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 13);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Log files folder";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(190, 280);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(492, 20);
+            this.textBox8.TabIndex = 28;
+            this.textBox8.Text = global::FSIOrderSubmit.Properties.Settings.Default.TestOrderStatusRequestUri;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(73, 283);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(112, 13);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Test Order Status URI";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(73, 309);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(111, 13);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "Live Order Status URI";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(190, 306);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(492, 20);
+            this.textBox9.TabIndex = 31;
+            this.textBox9.Text = global::FSIOrderSubmit.Properties.Settings.Default.LiveOrderStatusRequestUri;
             // 
             // Configuration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 288);
+            this.ClientSize = new System.Drawing.Size(783, 374);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.bSelectLogFileLocation);
+            this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -247,5 +322,12 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button bSelectLogFileLocation;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox9;
     }
 }

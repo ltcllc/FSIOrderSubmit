@@ -63,9 +63,21 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\OrderServiceV5\Fail.cs" />
+    <Compile Include="Models\OrderStatus\OrderStatusResponse.cs" />
     <Compile Include="Models\OrderServiceV5\OrderServiceResponse.cs" />
     <Compile Include="Models\OrderServiceV5\Success.cs" />
     <Compile Include="FsiOrderServiceV5.cs" />
+    <Compile Include="Models\OrderStatus\Address.cs" />
+    <Compile Include="Models\OrderStatus\LineItem.cs" />
+    <Compile Include="Models\OrderStatus\LineItemLot.cs" />
+    <Compile Include="Models\OrderStatus\LineItemSerial.cs" />
+    <Compile Include="Models\OrderStatus\Message.cs" />
+    <Compile Include="Models\OrderStatus\OrderHold.cs" />
+    <Compile Include="Models\OrderStatus\OrderStatusData.cs" />
+    <Compile Include="Models\OrderStatus\Payment.cs" />
+    <Compile Include="Models\OrderStatus\Return.cs" />
+    <Compile Include="Models\OrderStatus\Shipment.cs" />
+    <Compile Include="Models\OrderStatus\UserDefinedField.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Configuration.resx">
