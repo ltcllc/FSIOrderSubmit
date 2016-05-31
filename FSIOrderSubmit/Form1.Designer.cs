@@ -37,6 +37,8 @@
             this.lblMessage = new System.Windows.Forms.Label();
             this.chkAsync = new System.Windows.Forms.CheckBox();
             this.bOrderStatusTest = new System.Windows.Forms.Button();
+            this.bGetItem = new System.Windows.Forms.Button();
+            this.bGetAllItems = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +96,8 @@
             // chkAsync
             // 
             this.chkAsync.AutoSize = true;
+            this.chkAsync.Checked = true;
+            this.chkAsync.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkAsync.Location = new System.Drawing.Point(12, 106);
             this.chkAsync.Name = "chkAsync";
             this.chkAsync.Size = new System.Drawing.Size(55, 17);
@@ -103,7 +107,6 @@
             // 
             // bOrderStatusTest
             // 
-            this.bOrderStatusTest.Enabled = false;
             this.bOrderStatusTest.Location = new System.Drawing.Point(307, 48);
             this.bOrderStatusTest.Name = "bOrderStatusTest";
             this.bOrderStatusTest.Size = new System.Drawing.Size(131, 23);
@@ -112,11 +115,33 @@
             this.bOrderStatusTest.UseVisualStyleBackColor = true;
             this.bOrderStatusTest.Click += new System.EventHandler(this.bOrderStatusTest_Click);
             // 
+            // bGetItem
+            // 
+            this.bGetItem.Location = new System.Drawing.Point(307, 78);
+            this.bGetItem.Name = "bGetItem";
+            this.bGetItem.Size = new System.Drawing.Size(75, 23);
+            this.bGetItem.TabIndex = 7;
+            this.bGetItem.Text = "Get Item";
+            this.bGetItem.UseVisualStyleBackColor = true;
+            this.bGetItem.Click += new System.EventHandler(this.bGetItem_Click);
+            // 
+            // bGetAllItems
+            // 
+            this.bGetAllItems.Location = new System.Drawing.Point(388, 78);
+            this.bGetAllItems.Name = "bGetAllItems";
+            this.bGetAllItems.Size = new System.Drawing.Size(75, 23);
+            this.bGetAllItems.TabIndex = 8;
+            this.bGetAllItems.Text = "Get All Items";
+            this.bGetAllItems.UseVisualStyleBackColor = true;
+            this.bGetAllItems.Click += new System.EventHandler(this.bGetAllItems_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 128);
+            this.Controls.Add(this.bGetAllItems);
+            this.Controls.Add(this.bGetItem);
             this.Controls.Add(this.bOrderStatusTest);
             this.Controls.Add(this.chkAsync);
             this.Controls.Add(this.lblMessage);
@@ -143,6 +168,8 @@
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.CheckBox chkAsync;
         private System.Windows.Forms.Button bOrderStatusTest;
+        private System.Windows.Forms.Button bGetItem;
+        private System.Windows.Forms.Button bGetAllItems;
     }
 }
 

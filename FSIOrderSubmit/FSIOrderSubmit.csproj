@@ -62,8 +62,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FsiInventoryService.cs" />
+    <Compile Include="Models\InventoryInquiry\InventoryInquiryServiceResponse.cs" />
+    <Compile Include="Models\InventoryInquiry\InventoryItem.cs" />
     <Compile Include="Models\OrderServiceV5\Fail.cs" />
-    <Compile Include="Models\OrderStatus\OrderStatusResponse.cs" />
+    <Compile Include="Models\OrderStatus\OrderStatusServiceResponse.cs" />
     <Compile Include="Models\OrderServiceV5\OrderServiceResponse.cs" />
     <Compile Include="Models\OrderServiceV5\Success.cs" />
     <Compile Include="FsiOrderServiceV5.cs" />
@@ -73,11 +76,12 @@
     <Compile Include="Models\OrderStatus\LineItemSerial.cs" />
     <Compile Include="Models\OrderStatus\Message.cs" />
     <Compile Include="Models\OrderStatus\OrderHold.cs" />
-    <Compile Include="Models\OrderStatus\OrderStatusData.cs" />
+    <Compile Include="Models\OrderStatus\OrderStatusResponse.cs" />
     <Compile Include="Models\OrderStatus\Payment.cs" />
     <Compile Include="Models\OrderStatus\Return.cs" />
     <Compile Include="Models\OrderStatus\Shipment.cs" />
     <Compile Include="Models\OrderStatus\UserDefinedField.cs" />
+    <Compile Include="Models\IServiceResponse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Configuration.resx">

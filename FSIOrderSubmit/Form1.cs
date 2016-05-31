@@ -13,6 +13,7 @@ using Models.OrderServiceV5;
 using System.IO;
 using FSIOrderSubmit.Models.OrderServiceV5;
 using FSIOrderSubmit.Models.OrderStatus;
+using FSIOrderSubmit.Models.InventoryInquiry;
 
 namespace FSIOrderSubmit
 {
@@ -131,36 +132,39 @@ namespace FSIOrderSubmit
         private void GetOrderStatus(Guid orderId)
         {
             var fail = new Fail();
-            var success = new Success();
+            var orderStatusResponse = new OrderStatusResponse();
             var orderService = new FsiOrderServiceV5();           
 
-            var orderStatusResponse = orderService.GetOrderStatus(orderId);
+            var orderStatusServiceResponse = orderService.GetOrderStatus(orderId);
 
-            if (orderStatusResponse.ResponseMessage.IsSuccessStatusCode)
+            if (orderStatusServiceResponse.ResponseMessage.IsSuccessStatusCode)
             {
                 //do success stuff
-                string xml = orderStatusResponse.Content;
-                var serializer = new XmlSerializer(typeof(OrderStatusData));
-                var sr = new StringReader(orderStatusResponse.Content);
+                string xml = orderStatusServiceResponse.Content;
+                var serializer = new XmlSerializer(typeof(OrderStatusResponse));
+                var sr = new StringReader(orderStatusServiceResponse.Content);
 
-                //serialize the successful response
-                success = (Success) serializer.Deserialize(sr);
+                //save xml file
 
-                
+
+                //serialize the successful response if needed in objects
+                orderStatusResponse = (OrderStatusResponse)serializer.Deserialize(sr);
+
+
 
                 //write to log file
 
             }
             else
             {
-                if (!string.IsNullOrWhiteSpace(orderStatusResponse.Content))
+                if (!string.IsNullOrWhiteSpace(orderStatusServiceResponse.Content))
                 {
                     //do fail stuff
                     var serializer = new XmlSerializer(typeof(Fail));
-                    var sr = new StringReader(orderStatusResponse.Content);
+                    var sr = new StringReader(orderStatusServiceResponse.Content);
 
                     //serialize the failed response
-                    fail = (Fail) serializer.Deserialize(sr);
+                    //fail = (Fail) serializer.Deserialize(sr);
 
                     sr.Close();
 
@@ -170,6 +174,39 @@ namespace FSIOrderSubmit
             }            
         }
 
+        private async void GetAllItems()
+        {
+            var items = new List<InventoryItem>();
+            var inventoryService = new FsiInventoryService();
+            var response = await inventoryService.GetAllItems();
+
+            if (response.ResponseMessage.IsSuccessStatusCode)
+            {
+                string xml = response.Content;
+                var serializer = new XmlSerializer(typeof(List<InventoryItem>));
+                var sr = new StringReader(xml);
+                //items = (List<InventoryItem>) serializer.Deserialize(sr);
+            }
+            else
+            { }
+        }
+
+        private async void GetItem(string itemNumber)
+        {
+            var items = new InventoryItem();
+            var inventoryService = new FsiInventoryService();
+            var response = await inventoryService.GetItem(itemNumber);
+
+            if (response.ResponseMessage.IsSuccessStatusCode)
+            {
+                string xml = response.Content;
+                var serializer = new XmlSerializer(typeof(InventoryItem));
+                var sr = new StringReader(xml);
+                //items = (InventoryItem) serializer.Deserialize(sr);
+            }
+            else
+            { }
+        }
 
         private void bProcessFiles_Click(object sender, EventArgs e)
         {
@@ -248,9 +285,19 @@ namespace FSIOrderSubmit
         }
 
         private void bOrderStatusTest_Click(object sender, EventArgs e)
-        {
+        {                       
             Guid testOrderId = new Guid("0EAB4069-FEA2-4CB7-9019-69082C17CB31");
             GetOrderStatus(testOrderId);
+        }
+
+        private async void bGetItem_Click(object sender, EventArgs e)
+        {
+            GetItem("BM83190441139");
+        }
+
+        private void bGetAllItems_Click(object sender, EventArgs e)
+        {
+            GetAllItems();
         }
     }
 }

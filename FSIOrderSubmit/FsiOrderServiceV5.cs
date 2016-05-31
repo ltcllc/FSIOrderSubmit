@@ -1,6 +1,5 @@
 ﻿using FSIOrderSubmit.Models.OrderServiceV5;
 using FSIOrderSubmit.Models.OrderStatus;
-using FSIOrderSubmit.Models.OrderStatusResponse;
 using Models.OrderServiceV5;
 using Newtonsoft.Json;
 using System;
@@ -38,7 +37,7 @@ namespace FSIOrderSubmit
                 this.orderStatusRequestUri = FSIOrderSubmit.Properties.Settings.Default.LiveOrderStatusRequestUri;
             }            
         }
-
+            
         public async Task<OrderServiceResponse> SendOrderAsync(string orderXml)
         {
             var orderServiceResponse = new OrderServiceResponse();
@@ -105,9 +104,9 @@ namespace FSIOrderSubmit
             }
         }
 
-        public OrderStatusResponse GetOrderStatus(Guid orderId)
+        public OrderStatusServiceResponse GetOrderStatus(Guid orderId)
         {
-            var orderStatusResponse = new OrderStatusResponse();
+            var orderStatusResponse = new OrderStatusServiceResponse();
             string responseData = string.Empty;
             var fail = new Fail();
             var success = new Success();
