@@ -249,7 +249,7 @@ namespace FSIOrderSubmit
 
         private void bOrderStatusTest_Click(object sender, EventArgs e)
         {
-            Guid testOrderId = new Guid("A6B03A54-F381-4D59-ADAC-2ABB825D564B");
+            Guid testOrderId = new Guid("0EAB4069-FEA2-4CB7-9019-69082C17CB31");
             GetOrderStatus(testOrderId);
         }
     }

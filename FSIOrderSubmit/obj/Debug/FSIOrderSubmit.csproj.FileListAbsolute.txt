@@ -7,3 +7,15 @@ C:\Users\user\Documents\Visual Studio 2015\Projects\FSIOrderSubmit\FSIOrderSubmi
 C:\Users\user\Documents\Visual Studio 2015\Projects\FSIOrderSubmit\FSIOrderSubmit\obj\Debug\FSIOrderSubmit.exe
 C:\Users\user\Documents\Visual Studio 2015\Projects\FSIOrderSubmit\FSIOrderSubmit\obj\Debug\FSIOrderSubmit.pdb
 C:\Users\user\Documents\Visual Studio 2015\Projects\FSIOrderSubmit\FSIOrderSubmit\obj\Debug\FSIOrderSubmit.Form1.resources
+C:\Users\alstonc.FULFILLMENT\Source\Repos\FSIOrderSubmit\FSIOrderSubmit\bin\Debug\FSIOrderSubmit.exe.config
+C:\Users\alstonc.FULFILLMENT\Source\Repos\FSIOrderSubmit\FSIOrderSubmit\bin\Debug\FSIOrderSubmit.exe
+C:\Users\alstonc.FULFILLMENT\Source\Repos\FSIOrderSubmit\FSIOrderSubmit\bin\Debug\FSIOrderSubmit.pdb
+C:\Users\alstonc.FULFILLMENT\Source\Repos\FSIOrderSubmit\FSIOrderSubmit\bin\Debug\Newtonsoft.Json.dll
+C:\Users\alstonc.FULFILLMENT\Source\Repos\FSIOrderSubmit\FSIOrderSubmit\bin\Debug\Newtonsoft.Json.xml
+C:\Users\alstonc.FULFILLMENT\Source\Repos\FSIOrderSubmit\FSIOrderSubmit\obj\Debug\FSIOrderSubmit.csprojResolveAssemblyReference.cache
+C:\Users\alstonc.FULFILLMENT\Source\Repos\FSIOrderSubmit\FSIOrderSubmit\obj\Debug\FSIOrderSubmit.Configuration.resources
+C:\Users\alstonc.FULFILLMENT\Source\Repos\FSIOrderSubmit\FSIOrderSubmit\obj\Debug\FSIOrderSubmit.Form1.resources
+C:\Users\alstonc.FULFILLMENT\Source\Repos\FSIOrderSubmit\FSIOrderSubmit\obj\Debug\FSIOrderSubmit.Properties.Resources.resources
+C:\Users\alstonc.FULFILLMENT\Source\Repos\FSIOrderSubmit\FSIOrderSubmit\obj\Debug\FSIOrderSubmit.csproj.GenerateResource.Cache
+C:\Users\alstonc.FULFILLMENT\Source\Repos\FSIOrderSubmit\FSIOrderSubmit\obj\Debug\FSIOrderSubmit.exe
+C:\Users\alstonc.FULFILLMENT\Source\Repos\FSIOrderSubmit\FSIOrderSubmit\obj\Debug\FSIOrderSubmit.pdb
